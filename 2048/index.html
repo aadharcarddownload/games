@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+    <meta charset="utf-8">
+    <title>Play 2048 Game Online</title>
+    <link rel="shortcut icon" href="/2048/assets/img/logo.svg?v1.4" type="image/png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="description" content="Play the Classic game online! Use your keyboard arrow keys or touch controls on mobile to move the tiles and win the game!">
+    <meta name="keywords" content="2048, 2048 game, 2048 online, 2048 game online, 2048 google game, 2048 tile, google 2048 game online, 2468 game, stacktris, 20 48, block 2048, 2084 game, 2048 game download, 2480 game, 2048 original, 2408 game, 2046 game, 2048 by gabriele cirulli, 2048 for free, 2048 free game online, 2048 free online, 2048 play online free, merge block 2048 puzzle, 2048 chrome, 2048 cirulli">
+    <link href="/2048/assets/css/main.min7373.css?v1.4" rel="stylesheet">
+
+    <meta property="og:title" content="2048 Classic Game - Play Online">
+    <meta property="og:description" content="Play the Classic game online! Use your keyboard arrow keys or touch controls on mobile to move the tiles and win the game!">
+    <meta property="og:locale" content="en-us">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="/2048/">
+    <meta property="og:site_name" content="2048 Classic Game - Play Online">
+    <meta property="og:width" content="1024">
+    <meta property="og:height" content="1024">
+    <meta property="og:image" content="/2048/assets/img/2048-game.png">
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="2048 Classic Game - Play Online" />
+    <meta name="twitter:description" content="Play the 2048 game online! Use your keyboard arrow keys or touch controls on mobile to move the tiles and win the game!" />
+    <meta name="twitter:image" content="/2048/assets/img/2048-game.png">
+
+    <meta name="csrf-token" content="PQY3xz7Iytz43vLM6DgMo8zI2Wih9YEjjSVnUIcH">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/2048/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/2048/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/2048/favicon-16x16.png">
+    <link rel="manifest" href="/2048/site.webmanifest">
+    <link rel="mask-icon" href="safari-pinned-tab.svg" color="#e6b317">
+    <meta name="msapplication-TileColor" content="#e6b317">
+    <meta name="theme-color" content="#ffffff">
+    <link href="/2048/assets/css/20487373.css?v1.4" rel="stylesheet">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "VideoGame",
+  "name": "2048 Classic Game",
+  "url": "https://doodlecricket.org/2048/",
+  "image": "https://doodlecricket.org/2048/apple-touch-icon.png",
+  "description": "Play the 2048 Classic game online! Use your keyboard arrow keys or touch controls on mobile to move the tiles and win the game!",
+  "author": {
+    "@type": "Person",
+    "name": "Jon",
+    "sameAs": "https://google-blockbreaker.github.io"
+  },
+  "applicationCategory": "Game",
+  "operatingSystem": "Web"
+}
+</script>
+	
+    
+    <script type="application/ld+json">
+{
+    "@context": "http://schema.org",
+    "@type": "Product",
+    "brand": "",
+    "name": "22048 Classic Game - Play Online",
+    "description": "Play the 2048 Classic game online! Use your keyboard arrow keys or touch controls on mobile to move the tiles and win the game!",
+    "category": "Productivity",
+    "image": "/2048/assets/img/2048-game.png",
+    "aggregateRating": {
+        "@type": "AggregateRating",
+        "worstRating": "1",
+        "bestRating": "5"
+                    ,"ratingValue": "4.9",
+        "ratingCount": "134675"
+                }
+    }
+</script>
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-FK38GDXFZG"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-FK38GDXFZG');
+</script>
+
+    <!-- Google Adsense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1637241537344579"
+     crossorigin="anonymous"></script>
+
+</head>
+<body>
+    
+    <section class="section section--main">
+        <div class="container no-pading">
+
+            <style>
+    .score-container:after {
+        content: "Score" !important;
+    }
+
+    .best-container:after {
+        content: "Best" !important;
+    }
+</style>
+
+<script>
+    window.translations = {
+        win: 'You win!',
+        game_over: 'Game over!'
+    };
+</script>
+
+  <div class="gameplay-container">
+    <div class="above-game">
+      <div class="scores-container">
+        <div class="score-container">0</div>
+        <div class="best-container">0</div>
+      </div>
+      <a class="restart-button">New game</a>
+    </div>
+
+    <div class="game-container">
+      <div class="game-message">
+        <p></p>
+        <div class="lower">
+	        <a class="keep-playing-button">Keep going</a>
+          <a class="retry-button">Try again</a>
+        </div>
+      </div>
+
+      <div class="grid-container">
+        <div class="grid-row">
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+        </div>
+        <div class="grid-row">
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+        </div>
+        <div class="grid-row">
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+        </div>
+        <div class="grid-row">
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+          <div class="grid-cell"></div>
+        </div>
+      </div>
+
+      <div class="tile-container">
+
+      </div>
+    </div>
+  </div>        </div>
+
+	    <div style="text-align: center; padding: 20px;">
+    <h1 style="font-size: 24px; font-weight: bold; margin-bottom: 15px; color: #333;">2048 Classic</h2>
+        </div>
+        
+
+    <section class="section section--top">
+        <div class="container">
+            <div class="headline">
+                <h2 class="headline__text">Use the arrow keys (or W, A, S, D) to move the tiles. You can also swipe on a touchscreen. When two matching tiles touch, they merge into one with double the number. Keep going until you reach 2048!</h2>
+            </div>
+        </div>
+    </section>
+            
+
+<script src="/2048/assets/js/libs.min7373.js?v1.4"></script>
+<script src="/2048/assets/js/main.min7373.js?v1.4"></script>
+
+  <script src="/2048/js/bind_polyfill1b26.js?v2"></script>
+  <script src="/2048/js/classlist_polyfill1b26.js?v2"></script>
+  <script src="/2048/js/animframe_polyfill1b26.js?v2"></script>
+  <script src="/2048/js/keyboard_input_manager1b26.js?v2"></script>
+  <script src="/2048/js/html_actuator1b26.js?v2"></script>
+  <script src="/2048/js/grid1b26.js?v2"></script>
+  <script src="/2048/js/tile1b26.js?v2"></script>
+  <script src="/2048/js/local_storage_manager1b26.js?v2"></script>
+  <script src="/2048/js/game_manager1b26.js?v2"></script>
+  <script src="/2048/js/application1b26.js?v2"></script>
+</body>
+</html>
