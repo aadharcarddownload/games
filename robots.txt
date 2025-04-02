@@ -1,4 +1,0 @@
-User-agent: *
-Disallow: /spam-list.txt
-
-Sitemap: https://doodlecricket.org/sitemap.xml
